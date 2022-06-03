@@ -1,40 +1,33 @@
-function findMinimum(name,start_number,length){
+function findMissing(name){
 
-    let miss;
+let miss;
 let min =Math.min(...name);
 let max =Math.max(...name);
-if(min!=start_number){
-    miss=start_number;
+let n=name.length;
+let actual=(min+max)*n/2;
+let sum=0;
+for(let i=0;i<n;i++){
+    sum=sum+name[i];
 }
-else if(max!=start_number+length){
-    miss=start_number+length;
+
+
+
+if(sum==actual){
+    min=min-1;
+    max=max+1;
+    return "Missing value can start number :"+min +" or End number :"+max;
 }
 else{
-    for(let i=min;i<=max;i++){
-       
-        if(name.indexOf(i)<0){
-           miss=i; 
-        }
-    } 
-}
-
-    return miss;
-}
-var array = [121,120,124,123,125];
-//console.log(sayHello(array));
-
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
-  
-  readline.question('Enter Lenght of the sequence ?', name => {
-    //console.log(`Hi ${name}!`);
-    let k=parseInt(name);
+    actual=(min+max)*(n+1)/2;
+    miss=actual-sum;
     
-    let answer=findMinimum(array,120,k);
-    console.log(answer);
-    readline.close();
-  });
+}
+
+
+    return "missing value is :"+Math.floor(miss);
+}
+var array = [121,120,122,123,125,124];
+
+console.log(findMissing(array));
   
 
