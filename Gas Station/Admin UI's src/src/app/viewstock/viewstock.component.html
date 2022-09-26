@@ -1,0 +1,20 @@
+<table class="table table-sm" style="text-align: center;">
+    <thead>
+      <tr >
+        
+        <th scope="col">Gas Type</th>
+        <th scope="col">Stock(L)</th>
+        <th scope="col">Allocation</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let st of stock">
+        
+        <td>{{st.fuelType}}</td>
+        <td>{{st.stock}}</td>
+        <td>{{st.allocation}}</td>
+      </tr>
+      
+    </tbody>
+  </table>

@@ -1,0 +1,19 @@
+<div class="form">
+  <form class="create-order" (ngSubmit) = "onSubmit()">
+   
+    <label for="date" class="form-label">Select Type of Gas</label>
+    <select class="form-select" aria-label="Default select example" class="form-control" name="fuelType" [(ngModel)]="stock1.fuelType">
+      <!-- <option selected>Select Type of Gas</option> -->
+      <option value="92 octaine">92 Octaine </option>
+      <option value="95 octaine">95 Octaine</option>
+      <option value="super diesel">Super Diesel</option>
+      <option value="auto diesel">Auto Diesel</option>
+    </select>
+    <div class="mb-3">
+      <label for="quan" class="form-label" >Quantity</label>
+      <input type="number" class="form-control" id="quan" name="qty" [(ngModel)]="stock1.stock">
+    </div>
+    
+    <button type="submit"  class="btn btn-primary">Submit</button>
+  </form>
+</div>

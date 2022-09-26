@@ -1,0 +1,16 @@
+<form class="create-order">
+    <div class="mb-3">
+      <label for="date" class="form-label">Order Id </label>
+      <input type="text" class="form-control" id="quan" name="qty" placeholder={{orders.orderId}} disabled>
+      
+    </div>
+    <label for="date" class="form-label">Fuel Type </label>
+    <input type="number" class="form-control" id="quan" name="qty" placeholder={{orders.fuelType}} disabled >
+    <div class="mb-3">
+      <label for="quan" class="form-label" >Quantity</label>
+      <!-- [(ngModel)]=""  (click)="createOrder()"-->
+      <input type="number" class="form-control" id="quan" name="qty" placeholder={{orders.qty}} disabled>
+    </div>
+    
+    <button type="submit" (click)="updateStatus()" class="btn btn-primary">Deliver</button>
+  </form>

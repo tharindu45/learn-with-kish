@@ -1,0 +1,36 @@
+<div class="container-fluid my-5 d-sm-flex justify-content-center">
+    <div class="card px-2 content">
+        <div class="card-header bg-white">
+          <div class="row justify-content-between">
+                <div class="col">
+                    <!-- <p class="text-muted"> Order ID  <span class="font-weight-bold text-dark">1222528743</span></p> 
+                    <p class="text-muted"> Place On <span class="font-weight-bold text-dark">12,March 2019</span> </p> -->
+                </div>
+                <div class="flex-col my-auto text-center img">
+                    <h6 class="ml-auto mr-3">
+                        <img src="assets/img/correction.jpg" alt="">
+                    </h6>
+                </div>
+          </div>
+        </div>
+        <div class="card-body">
+            <div class="media flex-column flex-sm-row">
+                <div class="media-body text-center">
+                    <h1>Your Order Is Completed!</h1>
+                    <h5>you will be receiving a confirmation email with order details</h5>    
+                <!-- </div><img class="align-self-center img-fluid" src="" width="180 " height="180"> -->
+            </div>
+        </div>
+        <div class="row px-3">
+            <div class="col">
+                <h6>Order ID:{{orders.orderId}}</h6>
+            </div>
+        </div>
+         <div class="card-footer  bg-white px-sm-3 pt-sm-4 px-0">
+            <div class="row text-center  ">
+                <button type="button" (click)="createOrder()" class="btn btn-success">Confirm</button>
+            </div> 
+            </div>
+        </div>
+    </div>
+</div>

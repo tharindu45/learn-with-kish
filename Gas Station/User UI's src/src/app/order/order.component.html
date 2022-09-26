@@ -1,0 +1,24 @@
+<form class="create-order">
+  <div class="mb-3">
+    <label for="date" class="form-label">Select Date</label>
+    <input type="date" class="form-control" id="date" aria-describedby="emailHelp">
+    
+  </div>
+  <label for="date" class="form-label">Select Type of Gas</label>
+  <select class="form-select" aria-label="Default select example" name="fuelType" [(ngModel)]="order.fuelType">
+    <!-- <option selected>Select Type of Gas</option> -->
+    <option value="92 octaine">92 Octaine </option>
+    <option value="95 octaine">95 Octaine</option>
+    <option value="super diesel">Super Diesel</option>
+    <option value="auto diesel">Auto Diesel</option>
+  </select>
+  <div class="mb-3">
+    <label for="quan" class="form-label" >Quantity</label>
+    <input type="number" class="form-control" id="quan" name="qty" [(ngModel)]="order.qty">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" (click)="createOrder()" class="btn btn-primary">Submit</button>
+</form>

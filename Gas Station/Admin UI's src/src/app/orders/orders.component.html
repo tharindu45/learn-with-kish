@@ -1,0 +1,31 @@
+<div class="card my-5">
+    <div class="card-body">
+      <div class="input-group " style="width:500px; margin-bottom:10px ;">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" name="search" [(ngModel)]="searchText" />
+        <button type="button" class="btn btn-outline-primary">search</button>
+      </div>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr style="text-align: center;">
+            <th scope="col">Order ID</th>
+            <th scope="col">FuelType</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Status</th>
+            <th scope="col">Date</th>
+            <th scope="col" colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders | filter :searchText">
+            <td>{{ order.orderId }}</td>
+            <td>{{ order.fuelType}}</td>
+            <td>{{order.qty }}</td>
+            <td>{{ order.status}}</td>
+            <td>{{order.date }}</td>
+            <td><button  (click) = "deleteOrder(order.orderId)" type="button" class="btn btn-danger">Delete</button></td>
+            <td><button (click) = "updateOrder(order.orderId)" type="button"  class="btn btn-success">Update</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
